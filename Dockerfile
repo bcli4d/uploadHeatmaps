@@ -47,6 +47,12 @@ ENV HOME /root
 # Define working directory.
 WORKDIR /root
 
+RUN chgrp -R 0 /mnt && \
+    chmod -R g+rwX /mnt
+
+RUN chgrp -R 0 /root && \
+    chmod -R g+rwX /root
+
 ENTRYPOINT tail -f /dev/null
 
 # Define default command.
