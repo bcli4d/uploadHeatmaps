@@ -53,6 +53,8 @@ RUN chgrp -R 0 /mnt && \
 RUN chgrp -R 0 /root && \
     chmod -R g+rwX /root
 
+USER 1001
+
 ENTRYPOINT tail -f /dev/null
 
 # Define default command.
