@@ -173,7 +173,7 @@ then
 fi
 if [ -z "${qhost}" ]
 then
-  qhost="quip-pathdb"
+  qhost="quip-pathdb:8080"
 fi
 if [ -z "${manifest}" ]
 then

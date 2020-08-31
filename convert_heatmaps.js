@@ -162,7 +162,7 @@ function convert(filename,metadata){
 
     var options = {
       host: url,
-      port: 80,
+      port: 8080,
       path: '/idlookup/' + clio.collection + '/' + study_id + '/' + subject_id + '/' + image_id + '?_format=json',
       // authentication headers
       headers: {
