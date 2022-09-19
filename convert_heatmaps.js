@@ -185,6 +185,7 @@ function convert(filename,metadata){
           console.error('Error: No data for ' + image_id);
           process.exit(50);
         }
+        console.info("Result:",JSON.stringify(result))
         if(result.length<1)  {
           console.info("Error: result.length<1") 
           console.info("result = []:",result == [])
