@@ -171,6 +171,7 @@ function convert(filename,metadata){
       }
     };
 
+    console.info("options:", options) 
     // this is the call to retrieve the slides unique identifier from pathDB
     request = http.get(options, function(res){
       var body = "";
@@ -178,6 +179,7 @@ function convert(filename,metadata){
           body += data;
       });
       res.on('end', function() {
+        console.info("Body:",body) 
         let result = JSON.parse(body);
         let basename = path.basename(filename);
         // Check if no results are returned.
